@@ -40,7 +40,7 @@ public class Level extends ScreenAdapter {
     public static Enums.Sortstate sortstate;
     public static Enums.PillarStates pillarStates;
 
-    public Pig pig;
+   // public Pig pig;
 
     private BitmapFont font;
 
@@ -100,7 +100,7 @@ public class Level extends ScreenAdapter {
     public void show() {
         sortstate = Enums.Sortstate.IDLE;
         pillarStates = Enums.PillarStates.IDLE;
-        pig = new Pig();
+        //pig = new Pig();
 
         font = new BitmapFont();
         font.getData().setScale(1);
@@ -150,7 +150,7 @@ public class Level extends ScreenAdapter {
         Gdx.input.setInputProcessor(onscreenControls);
 
         setSprites();
-        setBuildings();
+        //setBuildings();
         //setPillars();
 
         getTime = false;
@@ -171,8 +171,8 @@ public class Level extends ScreenAdapter {
         for(int l = 0; l < colors.length; l++){
             colors[l] = false;
         }
-        pig.setX(Contants.PIG_START_X);
-        pig.setIdleState(false);
+        //pig.setX(Contants.PIG_START_X);
+       // pig.setIdleState(false);
         setControllers();
         startTime = System.currentTimeMillis();
         pillarStates  = Enums.PillarStates.MOVING1;
@@ -313,7 +313,7 @@ public class Level extends ScreenAdapter {
                         pillars.get(l).setOver(true);
                         pillars.get(l).setY(Contants.RECTANGLE_POSITION_NEW_Y);
                     }
-                    pig.setIdleState(true);
+                    //pig.setIdleState(true);
                     isOver = true;
                 }
             }
@@ -776,7 +776,7 @@ public class Level extends ScreenAdapter {
 
         }
 
-        pig.update(delta);
+       // pig.update(delta);
 
 
 
@@ -789,7 +789,7 @@ public class Level extends ScreenAdapter {
         Gdx.gl.glClearColor(Contants.BACKGROUND_COLOR.r, Contants.BACKGROUND_COLOR.g, Contants.BACKGROUND_COLOR.b, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        update(delta);
+        update(delta * Contants.SIMULATION_VELOCITY_OFFSET);
 
 
         for(Building b: buildings){
@@ -801,7 +801,7 @@ public class Level extends ScreenAdapter {
         batch.begin();
 
 
-        batch.draw(background, 0, 0);
+        batch.draw(background, 0, 0, camera.viewportWidth, camera.viewportHeight);
         for(Building b : buildings){
             b.render(batch);
         }
@@ -823,7 +823,7 @@ public class Level extends ScreenAdapter {
         font.draw(batch, hudString, 10f , camera.viewportHeight - 505);
 
 
-        pig.render(batch);
+        //pig.render(batch);
 
 
         batch.end();

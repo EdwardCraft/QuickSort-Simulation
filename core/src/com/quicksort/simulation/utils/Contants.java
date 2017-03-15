@@ -17,6 +17,7 @@ public class Contants {
     public static final String HUD_CHANGE_LABEL = "Intercambios: ";
     public static final float HUD_VIEWPORT_SIZE = 480;
 
+    public static final float SIMULATION_VELOCITY_OFFSET = 10f;
 
     //pig
     public static final float PIG_START_X = 50f;
