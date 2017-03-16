@@ -6,5 +6,5 @@ so it may have some bugs.
 ![alt tag](https://cloud.githubusercontent.com/assets/9208418/23979611/f2ad4ce4-09fa-11e7-8df0-708dd41cee43.jpg)
 
 ## Runnin
-+ Desktop luncher: https://github.com/EdwardCraft/QuickSort-Simulation/blob/master/quick-sort.jar
-+ Android APK: https://github.com/EdwardCraft/QuickSort-Simulation/blob/master/quick-sort.apk
++ Desktop luncher: https://github.com/EdwardCraft/QuickSort-Simulation/blob/master/quick-sort.jar?raw=true
++ Android APK: https://github.com/EdwardCraft/QuickSort-Simulation/blob/master/quick-sort.apk?raw=true
